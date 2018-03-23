@@ -1,0 +1,14 @@
+// Bootstrap SCSS
+@import "bootstrap/bootstrap.scss";
+
+// wlasne SCSS - ogolne
+@import "base/variables";
+@import "utils/mixins";
+@import "base/global";
+@import "utils/grid";
+
+// wlasne SCSS - komponenty
+@import "components/header";
+@import "components/top_slider";
+@import "components/home";
+@import "components/footer";

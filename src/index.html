@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>Stroan randkowa</title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="Description" content="Twoja Deskrypcja Strony Głównej która powinna mieć około 155 znaków">
+    <!--ikona-->
+    <link rel="icon" href="img/wrench.png"/>
+
+
+
+  <!--Style-->
+	<!-- Glowny plik CSS po transforamcji -->
+	 <link rel="stylesheet" href="css/style.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Glowny styl -->
+	<link rel="stylesheet" href="style/style.css">
+
+  <!-- Fonty google -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+
+
+
+  <!--JS-->
+  <!-- JS Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!--Tether JS-->
+  <script src="js/tether.min.js"></script>
+  <!--Jquery JS-->
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <!--wlasne JS-->
+	<script src="js/custom.js"></script>
+  <!--Skrypty Gulpa-->
+
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+	<script>
+	const my_canvas = document.createElement('canvas');
+	my_canvas.width = 800;
+	my_canvas.height = 500;
+	document.body.appendChild(my_canvas);// obiekt DOM canvas
+  const ctx = my_canvas.getContext('2d');
+
+
+  ctx.fillRect(30, 30, 100, 100);
+
+	ctx.strokeRect(140, 30, 50,50);
+
+  ctx.clearRect(50,50,50,50);
+
+  ctx.beginPath();
+  ctx.moveTo(30,140);// wspolrzedne pierwszego pkt x,y od tad rysuje
+	ctx.lineTo(120,140);
+  ctx.lineTo(60,250);
+	ctx.lineTo(10,150);
+  ctx.closePath();
+	ctx.stroke();
+
+	ctx.beginPath();
+	//radiany = Math.PI/180*45
+	ctx.arc(400,250,100,Math.PI/180*45, Math.PI/180*-120,true)
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(200,250);// wspolrzedne pierwszego pkt x,y od tad rysuje
+	ctx.bezierCurveTo(200,100,400,400,400,250);
+
+	ctx.stroke();
+
+	ctx.beginpath();
+	ctx.moveTo(40,300);
+	ctx.lineTo(300,320);
+	ctx.lineTo(400,380);
+	ctx.bezierCurveTo(400,500, 60,500, 40,300);
+	ctx.lineTo(40,300);
+
+	ctx.fill();
+
+	</script>
+
+
+</body>
+
+
+</html>
